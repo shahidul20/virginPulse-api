@@ -14,10 +14,10 @@ public class TestDataCreator {
 
 		String firstName = Faker.instance().name().firstName();
 		String lastName = Faker.instance().name().lastName();
-		int numberBetween = Faker.instance().number().numberBetween(1, 0);
+		int numberBetween = Faker.instance().number().numberBetween(1, 10);
 		String checkInDate = LocalDateTime.now().format(dateTimeFormatter);
 		String checkOutDate = LocalDateTime.now().plusDays(1).format(dateTimeFormatter);
-		String specialNeed = Faker.instance().beer().hop().toString();
+		String specialNeed = Faker.instance().beer().hop();
 
 		CreateBooking booking = new CreateBooking();
 		booking.setFirstname(firstName);
